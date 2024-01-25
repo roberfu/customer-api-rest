@@ -1,0 +1,15 @@
+project:
+  name: ^project.artifactId^
+  version: ^project.version^
+server:
+  port: 8001
+  servlet:
+    context-path: /api
+  error:
+    include-message: always
+spring:
+  application:
+    name: customer-api-rest
+  sql:
+    init:
+      mode: always
