@@ -1,12 +1,13 @@
 package cl.springmachine.customer.api.rest.controllers;
 
+import cl.springmachine.customer.api.rest.dtos.CustomerCreateRequestDto;
 import cl.springmachine.customer.api.rest.dtos.CustomerResponseDto;
 import cl.springmachine.customer.api.rest.services.CustomerService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customers")
@@ -22,4 +23,11 @@ public class CustomerController {
     ResponseEntity<Iterable<CustomerResponseDto>> getAllCustomers() {
         return new ResponseEntity<>(customerService.getAllCustomers(), HttpStatus.OK);
     }
+
+    @PostMapping
+    @Validated
+    ResponseEntity<CustomerResponseDto> saveCustomer(@Valid @RequestBody CustomerCreateRequestDto requestDto) {
+        return new ResponseEntity<>(customerService.saveCustomer(requestDto), HttpStatus.CREATED);
+    }
+
 }

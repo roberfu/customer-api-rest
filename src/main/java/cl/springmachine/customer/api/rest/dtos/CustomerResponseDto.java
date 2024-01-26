@@ -16,4 +16,29 @@ public class CustomerResponseDto {
 
     @JsonProperty("last_name")
     private String lastName;
+
+    @JsonProperty("document_type")
+    private String documentType;
+
+    @JsonProperty("document_id")
+    private String documentId;
+
+    private String phone;
+
+    private String email;
+
+    // private Address address;
+
+    // private InvoiceData invoiceData;
+
+    @JsonProperty("customer_type")
+    private String customerType;
+
+    @JsonProperty("legal_name")
+    private String legalName;
+
+    // private Contact contact;
+
+    private String classification;
+
 }
