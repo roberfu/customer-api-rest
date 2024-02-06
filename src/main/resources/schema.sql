@@ -10,6 +10,5 @@ CREATE TABLE IF NOT EXISTS customer(
     invoice_data_id INT,
     customer_type TEXT,
     legal_name TEXT,
-    contact_id INT,
     classification TEXT
 );

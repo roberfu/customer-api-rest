@@ -1,6 +1,7 @@
 package cl.springmachine.customer.api.rest.dtos;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -8,37 +9,36 @@ import lombok.Data;
 @Builder
 public class CustomerResponseDto {
 
+	private String id;
 
-    private String id;
+	@JsonProperty("first_name")
+	private String firstName;
 
-    @JsonProperty("first_name")
-    private String firstName;
+	@JsonProperty("last_name")
+	private String lastName;
 
-    @JsonProperty("last_name")
-    private String lastName;
+	@JsonProperty("document_type")
+	private String documentType;
 
-    @JsonProperty("document_type")
-    private String documentType;
+	@JsonProperty("document_id")
+	private String documentId;
 
-    @JsonProperty("document_id")
-    private String documentId;
+	private String phone;
 
-    private String phone;
+	private String email;
 
-    private String email;
+	@JsonProperty("address_id")
+	private Integer addressId;
 
-    // private Address address;
+	@JsonProperty("ivoice_data_id")
+	private Integer invoiceDataId;
 
-    // private InvoiceData invoiceData;
+	@JsonProperty("customer_type")
+	private String customerType;
 
-    @JsonProperty("customer_type")
-    private String customerType;
+	@JsonProperty("legal_name")
+	private String legalName;
 
-    @JsonProperty("legal_name")
-    private String legalName;
-
-    // private Contact contact;
-
-    private String classification;
+	private String classification;
 
 }

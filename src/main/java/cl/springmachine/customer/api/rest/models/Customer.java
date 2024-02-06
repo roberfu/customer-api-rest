@@ -1,37 +1,36 @@
 package cl.springmachine.customer.api.rest.models;
 
+import org.springframework.data.annotation.Id;
+
 import lombok.Builder;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 @Data
 @Builder
 public class Customer {
 
-    @Id
-    private Integer id;
+	@Id
+	private Integer id;
 
-    private String firstName;
+	private String firstName;
 
-    private String lastName;
+	private String lastName;
 
-    private String documentType;
+	private String documentType;
 
-    private String documentId;
+	private String documentId;
 
-    private String phone;
+	private String phone;
 
-    private String email;
+	private String email;
 
-    private Integer addressId;
+	private Integer addressId;
 
-    private Integer invoiceDataId;
+	private Integer invoiceDataId;
 
-    private String customerType;
+	private String customerType;
 
-    private String legalName;
+	private String legalName;
 
-    private Integer contactId;
-
-    private String classification;
+	private String classification;
 }

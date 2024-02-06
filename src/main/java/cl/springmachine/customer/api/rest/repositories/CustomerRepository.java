@@ -1,7 +1,8 @@
 package cl.springmachine.customer.api.rest.repositories;
 
-import cl.springmachine.customer.api.rest.models.Customer;
 import org.springframework.data.repository.CrudRepository;
+
+import cl.springmachine.customer.api.rest.models.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Integer> {
 }
